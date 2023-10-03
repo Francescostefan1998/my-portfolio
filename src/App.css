@@ -1,5 +1,7 @@
 :root {
   --main-background-color: #0e0f1e;
+  --pink-intense: rgba(234, 20, 134, 0.1);
+  --pink-light: rgba(220, 17, 125, 0.01);
 }
 
 .App {

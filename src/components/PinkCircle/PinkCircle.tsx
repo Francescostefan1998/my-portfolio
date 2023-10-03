@@ -1,9 +1,9 @@
 import React from "react";
 import "./pinkCircle.css";
 interface Props {
-  top: number;
-  left: number;
-  size: number;
+  top: string;
+  left: string;
+  size: string;
 }
 
 const PinkCircle = ({ top, left, size }: Props) => {
