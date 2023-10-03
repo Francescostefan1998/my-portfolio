@@ -4,11 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavBar from "./components/MyNavBar/MyNavBar";
 import MyHome from "./components/MyHome/MyHome";
 import PinkCircle from "./components/PinkCircle/PinkCircle";
+import CodingGuy from "./components/CodingGuy/CodingGuy";
 function App() {
   return (
     <div className="App">
       <MyNavBar />
       <MyHome />
+      <CodingGuy />
       hello
       <br />
       hello

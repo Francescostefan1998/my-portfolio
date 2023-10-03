@@ -1,0 +1,139 @@
+.string {
+  color: white;
+  z-index: 2;
+
+  transition: transform 0.1s ease; /* Orange for 'Welcome' */
+}
+.string:hover {
+  animation: bounce 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) !important;
+}
+
+.home {
+  margin-left: auto;
+  color: white;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  max-height: 10vh;
+  overflow: hidden;
+}
+.wrapper:hover {
+  animation: bounce;
+  animation: bounce 2s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+.cursor {
+  display: flex;
+  width: 2px;
+  color: white;
+  font-weight: 700;
+  height: 1em;
+  background-color: transparent;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  5%,
+  70% {
+    transform: scaleY(0.8) scaleX(1.2);
+  }
+  15%,
+  80% {
+    transform: scaleY(0.9) scaleX(1.1);
+  }
+  25%,
+  90% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  35%,
+  95% {
+    transform: scaleY(0.975) scaleX(1.025);
+  }
+}
+
+.welcome {
+  margin-top: 4vh;
+  width: 100%;
+  height: 15vh;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 80px;
+  font-size: 58px; /* Adjust the font size as needed */
+  font-weight: 700;
+  align-items: baseline;
+  padding-inline: 18vh;
+}
+.welcome-home {
+  margin-top: 4vh;
+  width: 100%;
+  height: 15vh;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 80px;
+  font-size: 58px; /* Adjust the font size as needed */
+  font-weight: 700;
+  align-items: baseline;
+  padding-inline: 18vh;
+}
+
+#my-element-disabled {
+  box-shadow: transparent !important;
+}
+
+.single-letter-bouncing {
+  font-weight: 700;
+  font-size: 34px !important;
+}
+
+@media (max-width: 1024px) {
+  .welcome {
+    margin-top: 6vh;
+    font-size: 40px;
+  }
+  .wrapper {
+    max-height: 6vh;
+    overflow: hidden;
+  }
+  .home {
+    width: 100%;
+  }
+  .single-letter-bouncing {
+    font-size: 22px !important;
+  }
+  #home {
+    height: fit-content;
+    padding-bottom: 20vh;
+  }
+}
+@media (max-width: 768px) {
+  .welcome {
+    margin-top: 8vh;
+    font-size: 26px;
+  }
+  .wrapper {
+    max-height: 4vh;
+    overflow: hidden;
+  }
+  .single-letter-bouncing {
+    font-size: 12px !important;
+  }
+}

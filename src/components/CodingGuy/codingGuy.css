@@ -1,0 +1,141 @@
+#coding-guy-nerd {
+  position: absolute;
+  top: 56vh;
+  left: 20vh;
+}
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-top: -12vh;
+  margin-bottom: 1vh;
+}
+
+.image-container-loading {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 200px;
+  z-index: 5;
+  color: black;
+}
+
+.piece {
+  position: absolute;
+  background-size: calc(100% * 25) calc(100% * 25);
+  transition: left 1s, top 1s, opacity 1s, transform 1s;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 14px;
+  margin-top: 50px;
+  font-size: 1em;
+  text-align: center;
+  color: #333;
+}
+
+.skill-item {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.descibe-your-skills {
+  text-align: left;
+  margin-top: 6vh;
+}
+
+.descibe-your-skills-loading {
+  text-align: left;
+  margin-top: 6vh;
+}
+
+.letterBouncing-container {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.single-letter-bouncing {
+  font-size: 40px;
+  margin: 0;
+}
+.single-letter-bouncing:hover {
+  animation: bounce;
+  animation: bounce 2s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+#skills {
+  height: fit-content;
+}
+@keyframes bounce {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  5%,
+  70% {
+    transform: scaleY(0.8) scaleX(1.2);
+  }
+  15%,
+  80% {
+    transform: scaleY(0.9) scaleX(1.1);
+  }
+  25%,
+  90% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  35%,
+  95% {
+    transform: scaleY(0.975) scaleX(1.025);
+  }
+}
+@media (max-width: 1024px) {
+  .skills {
+    width: 100%;
+  }
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 26vh;
+    margin-bottom: -2vh;
+    margin-inline: auto;
+  }
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-gap: 14px;
+    margin-top: 50px;
+    font-size: 1em;
+    text-align: center;
+    color: #333;
+    width: 100%; /* Add this line */
+  }
+  .descibe-your-skills {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 6vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills {
+    padding-inline: 20px;
+  }
+}
