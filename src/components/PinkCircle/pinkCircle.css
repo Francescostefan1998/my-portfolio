@@ -1,0 +1,12 @@
+.pink-circle {
+  position: absolute;
+  background: radial-gradient(
+    circle at center,
+    var(--pink-intense),
+    var(--pink-light) 70%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  border-radius: 50%;
+}
