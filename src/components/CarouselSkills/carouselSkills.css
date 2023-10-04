@@ -1,0 +1,16 @@
+/* carouselSkills.css */
+
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 120vw;
+  will-change: transform; /* Hints to the browser that this property will be animated, potentially optimizing performance */
+}
+
+.carousel-image {
+  flex: 0 0 calc(100vw / 10); /* Divide 100vw by 10 */
+  height: 100px;
+  width: auto;
+  filter: grayscale(100%);
+}
