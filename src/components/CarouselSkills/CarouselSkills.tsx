@@ -26,23 +26,21 @@ const CarouselSkills = () => {
   useEffect(() => {
     const moveCarousel = () => {
       setOffset((prev) => {
-        const childWidth =
-          containerRef.current && containerRef.current.firstChild
-            ? (containerRef.current.firstChild as HTMLElement).clientWidth
-            : 0;
-
+        const childWidth = containerRef.current?.firstChild
+          ? (containerRef.current.firstChild as HTMLElement).clientWidth
+          : 0;
         const newOffset = prev - 2; // The speed of movement, adjust as needed
 
         if (-newOffset >= childWidth) {
-          // If we've moved one image's width, then rotate the images
+          // Rotate the images
           IMAGES.push(IMAGES.shift() as string);
-          return 0;
+          return newOffset + childWidth - 2; // Adjust the offset to account for the image width, but keep moving it at the same speed
         }
         return newOffset;
       });
     };
 
-    const interval = setInterval(moveCarousel, 50); // This is the rate of "frame" update
+    const interval = setInterval(moveCarousel, 40); // This is the rate of "frame" update
 
     return () => clearInterval(interval);
   }, []);
