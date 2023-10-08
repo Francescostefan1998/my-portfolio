@@ -6,6 +6,7 @@ import MyHome from "./components/MyHome/MyHome";
 import PinkCircle from "./components/PinkCircle/PinkCircle";
 import CodingGuy from "./components/CodingGuy/CodingGuy";
 import CarouselSkills from "./components/CarouselSkills/CarouselSkills";
+import MagicParticlesComponent from "./components/magicParticle/MagicParticleComponent";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <MyHome />
         <CodingGuy />
         <CarouselSkills />
+        <MagicParticlesComponent />
         hello
         <br />
         hello
